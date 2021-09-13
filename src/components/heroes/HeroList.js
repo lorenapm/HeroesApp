@@ -4,10 +4,9 @@ import { HeroCard } from "./HeroCard";
 
 export const HeroList = ({ publisher }) => {
   const heroes = getHeroesByPublisher(publisher);
-  console.log(heroes);
 
   return (
-    <div className="card-columns">
+    <div className="row">
       {heroes.map((hero) => (
         <HeroCard key={hero.id} {...hero} />
       ))}
